@@ -1,0 +1,193 @@
+.home-section {
+    padding-top: 70px;
+    overflow: hidden;
+}
+
+/* Slider */
+
+.hero-slider {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: relative;
+    flex: 0 0 100%;
+    animation: heroSlider 10s infinite ease-in-out;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay */
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Content */
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: white;
+    width: 600px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 65px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-content button {
+    padding: 15px 35px;
+    border: none;
+    background: white;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-content button:hover {
+    background: black;
+    color: white;
+}
+
+/* Animation */
+
+@keyframes heroSlider {
+
+    0%,40% {
+        transform: translateX(0);
+    }
+
+    45%,50% {
+        transform: translateX(-100%);
+    }
+
+    50%,90% {
+        transform: translateX(-100%);
+    }
+
+    95%,100% {
+        transform: translateX(0);
+    }
+}
+
+/* ============================= */
+/* Tablet */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+    .hero-slider {
+        height: 80vh;
+    }
+
+    .hero-content {
+        width: 500px;
+        left: 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .hero-content button {
+        padding: 14px 30px;
+    }
+
+}
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .home-section {
+        padding-top: 60px;
+    }
+
+    .hero-slider {
+        height: calc(100vh - 60px);
+    }
+
+    .hero-content {
+        width: 90%;
+        left: 5%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-content button {
+        padding: 12px 25px;
+    }
+
+}
+
+/* ============================= */
+/* Small Mobile */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+    .hero-slider {
+        height: calc(100vh - 60px);
+    }
+
+    .hero-content {
+        width: 90%;
+        left: 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .hero-content button {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+}
